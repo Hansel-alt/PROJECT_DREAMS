@@ -1,8 +1,9 @@
 body {
   font-family: "Comic Sans MS", cursive, sans-serif;
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-image: url(../img/back.jpg);
+  background: url(../img/back.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
 }
 
 #logo {
