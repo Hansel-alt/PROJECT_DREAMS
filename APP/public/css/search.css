@@ -5,12 +5,12 @@
   flex-wrap: nowrap;
   overflow-x: scroll;
   justify-content: stretch;
-  margin: 10px;
+  padding: 10px;
   text-align: center;
   list-style-type: none;
-  line-height: 3em;
   color: #050404;
-  font: italic 20px Georgia, serif;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 15px;
 }
 
 .op > * {
@@ -21,6 +21,9 @@
 .op .w3-card-4 {
   display: flex;
   flex-direction: column;
+  border: 5px dotted #f1f1f1;
+  padding: 5px;
+  margin: 5px;
 }
 
 .op .w3-card-4 > .w3-container > {
