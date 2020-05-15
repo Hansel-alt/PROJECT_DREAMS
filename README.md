@@ -2,5 +2,4 @@
 
 https://github.com/Hansel-alt/PROJECT_DREAMS.git
 
-Using 3rd Party MyAnimeList api
-Jihan to create a simple web application
+Using 3rd Party MyAnimeList api Jikan "https://jikan.docs.apiary.io/" to create a simple web application
