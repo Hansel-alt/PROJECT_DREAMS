@@ -2,7 +2,7 @@ body {
   font-family: "Comic Sans MS", cursive, sans-serif;
   background-repeat: no-repeat;
   background-size: auto;
-  background-image: url("https://wallpaperaccess.com/full/538943.jpg");
+  background: url(/public/img/back.jpg);
 }
 
 #logo {
