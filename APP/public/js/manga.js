@@ -13,7 +13,7 @@ getNovel();
 function displayNovel(result) {
   let list = document.getElementById("novel").innerHTML;
   let i = 0;
-  for (i = 0; i < 10; i++) {
+  for (i = 0; i < 15; i++) {
     list += `<ul style="list-style-type: none;"><li><img src="${result.top[i].image_url}" height="120" width="100" ><a class="collection-item" style="text-decoration: none;" href="#" onclick='displayManga("${result.top[i].title}")'>${result.top[i].title}</a></li></ul>`;
   }
   document.getElementById("novel").innerHTML = list;
@@ -34,7 +34,7 @@ getTop();
 function displayTop(result) {
   let list = document.getElementById("top").innerHTML;
   let i = 0;
-  for (i = 0; i < 10; i++) {
+  for (i = 0; i < 15; i++) {
     list += `<ul style="list-style-type: none;"><li><img src="${result.top[i].image_url}" height="120" width="100"><a class="collection-item" style="text-decoration: none;" href="#" onclick='displayManga("${result.top[i].title}")'>${result.top[i].title}</a></li></ul>`;
   }
   document.getElementById("top").innerHTML = list;
@@ -55,7 +55,7 @@ getShot();
 function displayShot(result) {
   let list = document.getElementById("oneshot").innerHTML;
   let i = 0;
-  for (i = 0; i < 20; i++) {
+  for (i = 0; i < 25; i++) {
     list += `<div class="w3-container">
     <div class="w3-card-4">
         <a class="mylinklist" href="${result.top[i].url}" target="_blank"><img src="${result.top[i].image_url}"></a>
@@ -84,7 +84,7 @@ getPopular();
 function displayPopular(result) {
   let list = document.getElementById("popular").innerHTML;
   let i = 0;
-  for (i = 0; i < 20; i++) {
+  for (i = 0; i < 25; i++) {
     list += `<div class="w3-container">
     <div class="w3-card-4">
         <a class="mylinklist" href="${result.top[i].url}" target="_blank"><img src="${result.top[i].image_url}"></a>
@@ -113,7 +113,7 @@ async function getManga(mangaName) {
       if (info.results[i].title == mangaName) {
         document.getElementById(
           "result"
-        ).innerHTML = `<img src="${info.results[i].image_url}" height="300" width="300"> 
+        ).innerHTML = `<img src="${info.results[i].image_url}"> 
                 <li> ${info.results[i].title}</li>`;
         document.getElementById(
           "result"

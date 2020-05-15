@@ -1,158 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
   <title>AniSoul</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
-  <link rel="icon" href="img/logo.png" type="image/x-icon">
-  
-  <body onload="displayManga('One Piece')">
-    <!-- Sidebar/menu -->
-    <nav
-      class="w3-sidebar w3-collapse w3-top w3-large w3-padding"
-      style="z-index: 3; width: 150px; font-weight: bold;"
-      id="mySidebar"
-    >
-      <br />
-      <a
-        href="javascript:void(0)"
-        onclick="w3_close()"
-        class="w3-button w3-hide-large w3-display-topleft"
-        style="width: 100%; font-size: 22px;"
-        >Close</a
-      >
-      <div class="w3-container">
-        <div class="w3-padding-64">
-          <a href="index.html"><img src="img/100logo.png" alt="" title=""></a></div>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" />
+  <link rel="icon" href="img/logo.png" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" style="z-index: 3; width: 150px; font-weight: bold;"
+    id="mySidebar">
+    <br />
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+      style="width: 100%; font-size: 22px;">Close</a>
+    <div class="w3-container">
+      <div class="w3-padding-64">
+        <a href="index.html"><img src="img/100logo.png" alt="" title="" /></a>
       </div>
-      <div class="w3-bar-block">
-        <a
-          href="index.html"
-          onclick="w3_close()"
-          class="w3-bar-item w3-button w3-hover-purple"
-          >Home</a
-        >
-        <a
-          href="anime.html"
-          onclick="w3_close()"
-          class="w3-bar-item w3-button w3-hover-purple"
-          >Anime</a
-        >
-        <a
-          href="manga.html"
-          onclick="w3_close()"
-          class="w3-bar-item w3-button w3-hover-purple"
-          >Manga</a
-        >
-        <a
-          href="search.html"
-          onclick="w3_close()"
-          class="w3-bar-item w3-button w3-hover-purple"
-          >Search</a
-        >
-      </div>
-    </nav>
+    </div>
+    <div class="w3-bar-block">
+      <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-purple">Home</a>
+      <a href="anime.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-purple">Anime</a>
+      <a href="manga.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-purple">Manga</a>
+      <a href="search.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-purple">Search</a>
+    </div>
+  </nav>
 
-    <!-- Top menu on small screens -->
-    <header
-      class="w3-container w3-top w3-hide-large w3-xlarge w3-padding"
-    >
-      <a
-        href="javascript:void(0)"
-        class="w3-button w3-margin-right"
-        onclick="w3_open()"
-        >&#9776;</a
-      >
-      <span>ANISOUL</span>
-    </header>
+  <!-- Top menu on small screens -->
+  <header class="w3-container w3-top w3-hide-large w3-light-gray w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-light-gray w3-margin-right" onclick="w3_open()">&#9776;</a>
+    <span>ANISOUL</span>
+  </header>
 
-    <!-- Overlay effect when opening sidebar on small screens -->
-    <div
-      class="w3-overlay w3-hide-large"
-      onclick="w3_close()"
-      style="cursor: pointer;"
-      title="close side menu"
-      id="myOverlay"
-    ></div>
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor: pointer;" title="close side menu"
+    id="myOverlay"></div>
 
-    <!-- !PAGE CONTENT! -->
-    <div
-      class="w3-main"
-      style="margin-top: 20px; margin-left: 150px; margin-right: 10px;"
-    >
-      <div class="w3-container">
-        <div class="w3-bar">
-          <div
-            class="w3-left w3-padding"
-            style="width: 200px; align-items: center;"
-          >
-            <h3>TOP ALL MANGAS</h3>
-            <div id="top"></div>
-          </div>
-          <div class="w3-padding">
-            <h3>TOP ONESHOTS</h3>
-          <div id="oneshot"></div>
-          </div>
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-top: 20px; margin-left: 150px; margin-right: 10px;">
+    <div class="w3-container">
+      <div class="w3-bar">
+        <div class="w3-left w3-padding" style="width: 200px; align-items: center;">
+          <h3>TOP ALL MANGAS</h3>
+          <div id="top"></div>
         </div>
+        <div class="w3-padding">
+          <h3>TOP ONESHOTS</h3>
+          <div id="oneshot"></div>
+        </div>
+      </div>
 
-        <div class="w3-bar">
-          <div
-            class="w3-right w3-padding"
-            style="width: 200px; align-items: center;"
-          >
+      <div class="w3-bar">
+        <div class="w3-right w3-padding" style="width: 200px; align-items: center;">
           <h3>TOP NOVELS</h3>
           <div id="novel"></div>
-          </div>
-          <div class="w3-padding">
-            <h3>MOST POPULAR</h3>
-            <div id="popular"></div>
-          </div>
+        </div>
+        <div class="w3-padding">
+          <h3>MOST POPULAR</h3>
+          <div id="popular"></div>
+        </div>
 
-          <div class="w3-container" >
-            <div class="row">
+        <div class="w3-container">
+          <div class="row">
             <div class="col s12 m6">
-              <div
-                class="w3-card-4"
-                style="
-                  border: 7px outset #ff9966;
-                  margin-top: 40px;
-                  margin-left: auto;
-                  margin-right: auto;
-                  width: 500px;
-                "
-              >
+              <div class="w3-card-4" style="
+                    border: 7px outset #ff9966;
+                    margin-top: 40px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 40px;
+                    width: 500px;
+                  ">
                 <header class="w3-container">
-                  <h3>INFO</h3>
+                  <h3>DETAILS</h3>
                 </header>
                 <div class="card-content">
-                  <p
-                    id="result"
-                    style="
-                      margin: 10px;
-                      text-align: center;
-                      list-style-type: none;
-                      line-height: 3em;
-                      color: #050404;
-                      font: italic 20px Georgia, serif;
-                    "
-                  ></p>
+                  <p id="result" style="
+                        margin: 10px;
+                        text-align: center;
+                        list-style-type: none;
+                        line-height: 3em;
+                        color: #050404;
+                        font: italic 20px Georgia, serif;
+                      "></p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        </div>
       </div>
-      <!-- End page content -->
     </div>
+    <!-- End page content -->
+  </div>
 
-    <!-- Firebase App is always required and must be first -->
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
-    <!--<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>-->
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
-    <script src="js/home.js"></script>
-    <script src="js/manga.js"></script>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+    integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+    integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+    crossorigin="anonymous"></script>
+  <!-- Firebase App is always required and must be first -->
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+  <!--<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>-->
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/manga.js"></script>
+</body>
+
 </html>

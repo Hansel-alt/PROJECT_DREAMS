@@ -1,18 +1,18 @@
 body {
   font-family: "Comic Sans MS", cursive, sans-serif;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: auto;
   background-image: url("https://wallpaperaccess.com/full/538943.jpg");
 }
 
-#logo{
-display: block;
-float: left;
-margin-left: auto;
-margin-right: auto;
-max-width:100%;
-max-height:100%;
- }
+#logo {
+  display: block;
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
 
 /* Scroll Bar */
 ::-webkit-scrollbar {
