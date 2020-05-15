@@ -36,7 +36,7 @@ function updateDom(data) {
                             <p>${anime.synopsis}</p>
                         </div>
                         <div class="w3-container w3-center">
-                            <a style="text-decoration: none;" href="${anime.url}">Find Out More</a>
+                            <a style="text-decoration: none;" href="${anime.url}" target="_blank">Find Out More</a>
                         </div>
                     </div>
                 `;
