@@ -123,10 +123,10 @@ async function getAnime(animeName) {
         document.getElementById(
           "result"
         ).innerHTML = `<img src="${info.results[i].image_url}"> 
-                <li> ${info.results[i].title}</li>`;
+                <li> </br> ${info.results[i].title}</li>`;
         document.getElementById(
           "result"
-        ).innerHTML += `<li>Type: ${info.results[i].type}</li>`;
+        ).innerHTML += `<li> </br> Type: ${info.results[i].type}</li>`;
         document.getElementById(
           "result"
         ).innerHTML += `<li>Rated: ${info.results[i].rated}</li>`;
@@ -135,7 +135,7 @@ async function getAnime(animeName) {
         ).innerHTML += `<li>Air Date: ${info.results[i].start_date}</li>`;
         document.getElementById(
           "result"
-        ).innerHTML += `<li><p>Synopsis: </br> ${info.results[i].synopsis}</p></li>`;
+        ).innerHTML += `<li><p style="text-align: left;">Synopsis: </br> ${info.results[i].synopsis}</p></li>`;
         document.getElementById(
           "result"
         ).innerHTML += `<li><a class="mylinklist" style="text-decoration: none;" href="${info.results[i].url}" target="_blank"> Get More </a></li>`;

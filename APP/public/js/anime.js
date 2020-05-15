@@ -115,10 +115,10 @@ async function getAnime(animeName) {
         document.getElementById(
           "result"
         ).innerHTML = `<img src="${info.results[i].image_url}"> 
-                <li> ${info.results[i].title}</li>`;
+                <li> </br> ${info.results[i].title}</li>`;
         document.getElementById(
           "result"
-        ).innerHTML += `<li>Type: ${info.results[i].type}</li>`;
+        ).innerHTML += `<li> </br> Type: ${info.results[i].type}</li>`;
         document.getElementById(
           "result"
         ).innerHTML += `<li>Rated: ${info.results[i].rated}</li>`;
