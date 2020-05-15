@@ -12,7 +12,7 @@ getSummer();
 function displaySummer(result) {
   let list = document.getElementById("summer").innerHTML;
   let i = 0;
-  for (i = 0; i < 20; i++) {
+  for (i = 0; i < 40; i++) {
     list += `<div class="w3-container">
     <div class="w3-card-4">
         <a class="mylinklist" href="${result.anime[i].url}" target="_blank"><img src="${result.anime[i].image_url}"></a>
@@ -39,7 +39,7 @@ getSpring();
 function displaySpring(result) {
   let list = document.getElementById("spring").innerHTML;
   let i = 0;
-  for (i = 0; i < 20; i++) {
+  for (i = 0; i < 40; i++) {
     list += `<div class="w3-container">
     <div class="w3-card-4">
         <a class="mylinklist" href="${result.anime[i].url}" target="_blank"><img src="${result.anime[i].image_url}"></a>
@@ -66,7 +66,7 @@ getWinter();
 function displayWinter(result) {
   let list = document.getElementById("winter").innerHTML;
   let i = 0;
-  for (i = 0; i < 20; i++) {
+  for (i = 0; i < 40; i++) {
     list += `<div class="w3-container">
     <div class="w3-card-4">
         <a class="mylinklist" href="${result.anime[i].url}" target="_blank"><img src="${result.anime[i].image_url}"></a>
@@ -122,7 +122,7 @@ async function getAnime(animeName) {
       if (info.results[i].title == animeName) {
         document.getElementById(
           "result"
-        ).innerHTML = `<img src="${info.results[i].image_url}" height="300" width="300"> 
+        ).innerHTML = `<img src="${info.results[i].image_url}"> 
                 <li> ${info.results[i].title}</li>`;
         document.getElementById(
           "result"

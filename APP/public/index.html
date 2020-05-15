@@ -1,100 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
   <title>AniSoul</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/home.css" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster"/>
-  <link rel="icon" href="img/logo.png" type="image/x-icon">
-  
-  <body>
-    <!-- Sidebar/menu -->
-    <nav
-      class="w3-sidebar w3-collapse w3-top w3-large w3-padding"
-      style="z-index: 3; width: 300px; font-weight: bold;"
-      id="mySidebar"
-    >
-      <br />
-      <a
-        href="javascript:void(0)"
-        onclick="w3_close()"
-        class="w3-button w3-hide-large w3-display-topleft"
-        style="width: 100%; font-size: 22px;"
-        >Close</a
-      >
-      <div class="w3-container">    
-        <div class="w3-padding-64">
-          <a href="index.html"><img src="img/logo.png" alt="" title=""></a></div>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" />
+  <link rel="icon" href="img/logo.png" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" style="z-index: 3; width: 300px; font-weight: bold;"
+    id="mySidebar">
+    <br />
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+      style="width: 100%; font-size: 22px;">Close</a>
+    <div class="w3-container">
+      <div class="w3-padding-64">
+        <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
       </div>
-      <div class="w3-bar-block">
-        <a
-          href="index.html"
-          onclick="w3_close()"
-          class="w3-bar-item w3-button w3-hover-purple"
-          >Home</a
-        >
-        <a
-          href="anime.html"
-          onclick="w3_close()"
-          class="w3-bar-item w3-button w3-hover-purple"
-          >Anime</a
-        >
-        <a
-          href="manga.html"
-          onclick="w3_close()"
-          class="w3-bar-item w3-button w3-hover-purple"
-          >Manga</a
-        >
-        <a
-          href="search.html"
-          onclick="w3_close()"
-          class="w3-bar-item w3-button w3-hover-purple"
-          >Search</a
-        >
-      </div>
-    </nav>
+    </div>
+    <div class="w3-bar-block">
+      <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-purple">Home</a>
+      <a href="anime.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-purple">Anime</a>
+      <a href="manga.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-purple">Manga</a>
+      <a href="search.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-purple">Search</a>
+    </div>
+  </nav>
 
-    <!-- Top menu on small screens -->
-    <header class="w3-container w3-top w3-hide-large w3-xlarge w3-padding">
-      <a
-        href="javascript:void(0)"
-        class="w3-button w3-margin-right"
-        onclick="w3_open()"
-        >&#9776;</a
-      >
-      <span>ANISOUL</span>
-    </header>
+  <!-- Top menu on small screens -->
+  <header class="w3-container w3-top w3-hide-large w3-light-gray w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-light-gray w3-margin-right" onclick="w3_open()">&#9776;</a>
+    <span>ANISOUL</span>
+  </header>
 
-    <!-- Overlay effect when opening sidebar on small screens -->
-    <div
-      class="w3-overlay w3-hide-large"
-      onclick="w3_close()"
-      style="cursor: pointer;"
-      title="close side menu"
-      id="myOverlay"
-    ></div>
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor: pointer;" title="close side menu"
+    id="myOverlay"></div>
 
-    <!-- !PAGE CONTENT! -->
-    <div class="w3-main" style="margin-left: 340px; margin-right: 40px;">
-      <!-- Header -->
-      <div
-        class="w3-container"
-        style="margin-top: 80px; color: white;"
-        id="showcase"
-      >
-        <h1 class="w3-jumbo w3-text"><b>ANISOUL</b></h1>
-        <hr style="width: 300px; border: 5px solid #660066;" class="w3-round" />
-        <a></a>
-      </div>
-
-      <!-- End page content -->
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left: 340px; margin-right: 40px;">
+    <!-- Header -->
+    <div class="w3-container" style="margin-top: 80px; color: white;" id="showcase">
+      <h1 class="w3-jumbo w3-text"><b>ANISOUL</b></h1>
+      <hr style="width: 300px; border: 5px solid #660066;" class="w3-round" />
+      <a></a>
     </div>
 
-    <!-- Firebase App is always required and must be first -->
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
-    <!--<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>-->
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
-    <script src="js/home.js"></script>
-  </body>
+    <!-- End page content -->
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+    integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+    integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+    crossorigin="anonymous"></script>
+  <!-- Firebase App is always required and must be first -->
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+  <!--<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>-->
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+  <script src="js/home.js"></script>
+</body>
+
 </html>
