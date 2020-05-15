@@ -132,7 +132,13 @@ async function getAnime(animeName) {
         ).innerHTML += `<li>Rated: ${info.results[i].rated}</li>`;
         document.getElementById(
           "result"
-        ).innerHTML += `<li>Air Date: ${info.results[i].start_date}</li>`;
+        ).innerHTML += `<li>Start Date: ${info.results[i].start_date}</li>`;
+        document.getElementById(
+          "result"
+        ).innerHTML += `<li>End Date: ${info.results[i].end_date}</li>`;
+        document.getElementById(
+          "result"
+        ).innerHTML += `<li>Members: ${info.results[i].members}</li>`;
         document.getElementById(
           "result"
         ).innerHTML += `<li><p style="text-align: left;">Synopsis: </br> ${info.results[i].synopsis}</p></li>`;

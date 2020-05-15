@@ -133,9 +133,15 @@ async function getAnime(animeName) {
         document.getElementById(
           "result"
         ).innerHTML += `<li>Rated: ${info.results[i].rated}</li>`;
-        document.getElementById(
-          "result"
-        ).innerHTML += `<li>Episodes: ${info.results[i].episodes}</li>`;
+        if (info.results[i].airing == true) {
+          document.getElementById(
+            "result"
+          ).innerHTML += `<li>Airing/Upcoming</li>`;
+        } else {
+          document.getElementById(
+            "result"
+          ).innerHTML += `<li>Episodes: ${info.results[i].episodes}</li>`;
+        }
         document.getElementById(
           "result"
         ).innerHTML += `<li>MyAnimeList Score: ${info.results[i].score}</li>`;
