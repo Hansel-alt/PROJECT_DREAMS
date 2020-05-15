@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>AniSoul</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+  <link rel="icon" href="img/logo.png" type="image/x-icon">
+  
+  <body onload="displayAnime('One Piece')">
+    <!-- Sidebar/menu -->
+    <nav
+      class="w3-sidebar w3-collapse w3-top w3-large w3-padding"
+      style="z-index: 3; width: 150px; font-weight: bold;"
+      id="mySidebar"
+    >
+      <br />
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-button w3-hide-large w3-display-topleft"
+        style="width: 100%; font-size: 22px;"
+        >Close</a
+      >
+      <div class="w3-container">
+        <div class="w3-padding-64">
+          <a href="index.html"><img src="img/100logo.png" alt="" title=""></a></div>
+      </div>
+      <div class="w3-bar-block">
+        <a
+          href="index.html"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-purple"
+          >Home</a
+        >
+        <a
+          href="anime.html"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-purple"
+          >Anime</a
+        >
+        <a
+          href="manga.html"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-purple"
+          >Manga</a
+        >
+        <a
+          href="search.html"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-purple"
+          >Search</a
+        >
+      </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header
+      class="w3-container w3-top w3-hide-large w3-xlarge w3-padding"
+    >
+      <a
+        href="javascript:void(0)"
+        class="w3-button w3-margin-right"
+        onclick="w3_open()"
+        >&#9776;</a
+      >
+      <span>ANISOUL</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large"
+      onclick="w3_close()"
+      style="cursor: pointer;"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div
+      class="w3-main"
+      style="margin-top: 20px; margin-left: 150px; margin-right: 10px;"
+    >
+      <div class="w3-container">
+        <div class="w3-bar">
+          <div
+            class="w3-left w3-padding"
+            style="width: 200px; align-items: center;"
+          >
+            <h3>TOP ALL ANIMES</h3>
+            <div id="top"></div>
+          </div>
+          <div class="w3-padding">
+            <h3>TOP AIRING</h3>
+            <div id="airing"></div>
+          </div>
+        </div>
+
+        <div class="w3-bar">
+          <div
+            class="w3-right w3-padding"
+            style="width: 200px; align-items: center;"
+          >
+            <h3>TOP UPCOMING</h3>
+            <div id="upcoming"></div>
+          </div>
+          <div class="w3-padding">
+            <h3>MOST POPULAR</h3>
+            <div id="popular"></div>
+          </div>
+
+          <div class="w3-container" >
+              <div class="row">
+              <div class="col s12 m6">
+                <div
+                  class="w3-card-4"
+                  style="
+                    border: 7px outset #ff9966;
+                    margin-top: 40px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 500px;
+                  "
+                >
+                  <header class="w3-container">
+                    <h3>INFO</h3>
+                  </header>
+                  <div class="card-content">
+                    <p
+                      id="result"
+                      style="
+                        margin: 10px;
+                        text-align: center;
+                        list-style-type: none;
+                        line-height: 3em;
+                        color: #050404;
+                        font: italic 20px Georgia, serif;
+                      "
+                    ></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- End page content -->
+    </div>
+
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <!--<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/anime.js"></script>
+  </body>
+</html>
