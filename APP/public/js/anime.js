@@ -14,7 +14,13 @@ function displayUpcoming(result) {
   let list = document.getElementById("upcoming").innerHTML;
   let i = 0;
   for (i = 0; i < 25; i++) {
-    list += `<ul style="list-style-type: none;"><li><img src="${result.top[i].image_url}" height="120" width="100"><a class="collection-item" style="text-decoration: none;" href="#" onclick='displayAnime("${result.top[i].title}")'>${result.top[i].title}</a></li></ul>`;
+    list += `<ul style="list-style-type: none; padding: 0px; "><li><div class="w3-container">
+    <div class="w3-card-4">
+        <a class="mylinklist" href="${result.top[i].url}" target="_blank"><img src="${result.top[i].image_url}" height="120" width="100"></a>
+    <div class="w3-container w3-center">
+        <a class="collection-item" style="text-decoration: none;" href="#" onclick='displayAnime("${result.top[i].title}")'><span class="card-title">${result.top[i].title}</span></a>
+        </div>
+    </div></div></li></ul>`;
   }
   document.getElementById("upcoming").innerHTML = list;
 }
@@ -35,8 +41,13 @@ function displayTop(result) {
   let list = document.getElementById("top").innerHTML;
   let i = 0;
   for (i = 0; i < 25; i++) {
-    list += `<ul style="list-style-type: none;"><li>
-    <img src="${result.top[i].image_url}" height="120" width="100"><a class="collection-item" style="text-decoration: none;" href="#" onclick='displayAnime("${result.top[i].title}")'>${result.top[i].title}</a></li></ul>`;
+    list += `<ul style="list-style-type: none; padding: 0px; "><li><div class="w3-container">
+    <div class="w3-card-4">
+        <a class="mylinklist" href="${result.top[i].url}" target="_blank"><img src="${result.top[i].image_url}" height="120" width="100"></a>
+    <div class="w3-container w3-center">
+        <a class="collection-item" style="text-decoration: none;" href="#" onclick='displayAnime("${result.top[i].title}")'><span class="card-title">${result.top[i].title}</span></a>
+        </div>
+    </div></div></li></ul>`;
   }
   document.getElementById("top").innerHTML = list;
 }

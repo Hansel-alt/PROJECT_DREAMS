@@ -14,7 +14,7 @@ h5 {
 
 body {
   font-family: "Comic Sans MS", cursive, sans-serif;
-  background: linear-gradient(to bottom, #ff9966 40%, #ff33cc 100%);
+  background: linear-gradient(to bottom, #ff9966 40%, #660066 100%);
 }
 
 /* Data */
@@ -46,7 +46,6 @@ body {
   height: 450px;
   overflow-y: scroll;
   overflow-x: hidden;
-  background-color: #ff9966;
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 16px;
   line-height: 200%;
@@ -80,7 +79,6 @@ body {
 
 .w3-card-4 > .w3-container {
   flex-grow: 1;
-  background-color: #ff9966;
 }
 
 /* Scroll Bar */
@@ -88,11 +86,11 @@ body {
   width: 15px;
 }
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px #ff33cc;
+  box-shadow: inset 0 0 5px #660066;
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #eaf2fa;
+  background: #F1F1F1;
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
