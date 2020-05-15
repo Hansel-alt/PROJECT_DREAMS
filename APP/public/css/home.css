@@ -2,7 +2,7 @@ body {
   font-family: "Comic Sans MS", cursive, sans-serif;
   background-repeat: no-repeat;
   background-size: auto;
-  background: url(/public/img/back.jpg);
+  background-image: url(../img/back.jpg);
 }
 
 #logo {
