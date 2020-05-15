@@ -18,7 +18,7 @@ function displayNovel(result) {
     <div class="w3-card-4">
         <a class="mylinklist" href="${result.top[i].url}" target="_blank"><img src="${result.top[i].image_url}" height="120" width="100"></a>
     <div class="w3-container w3-center">
-        <a class="collection-item" style="text-decoration: none;" href="#" onclick='displayAnime("${result.top[i].title}")'><span class="card-title">${result.top[i].title}</span></a>
+        <a class="collection-item" style="text-decoration: none;" href="#" onclick='displayManga("${result.top[i].title}")'><span class="card-title">${result.top[i].title}</span></a>
         </div>
     </div></div></li></ul>`;
   }
@@ -45,7 +45,7 @@ function displayTop(result) {
     <div class="w3-card-4">
         <a class="mylinklist" href="${result.top[i].url}" target="_blank"><img src="${result.top[i].image_url}" height="120" width="100"></a>
     <div class="w3-container w3-center">
-        <a class="collection-item" style="text-decoration: none;" href="#" onclick='displayAnime("${result.top[i].title}")'><span class="card-title">${result.top[i].title}</span></a>
+        <a class="collection-item" style="text-decoration: none;" href="#" onclick='displayManga("${result.top[i].title}")'><span class="card-title">${result.top[i].title}</span></a>
         </div>
     </div></div></li></ul>`;
   }
@@ -72,7 +72,7 @@ function displayShot(result) {
     <div class="w3-card-4">
         <a class="mylinklist" href="${result.top[i].url}" target="_blank"><img src="${result.top[i].image_url}"></a>
     <div class="w3-container w3-center">
-        <a class="collection-item" style="text-decoration: none;" href="#" onclick='displayAnime("${result.top[i].title}")'><span class="card-title">${result.top[i].title}</span></a>
+        <a class="collection-item" style="text-decoration: none;" href="#" onclick='displayManga("${result.top[i].title}")'><span class="card-title">${result.top[i].title}</span></a>
         </div>
     </div></div>`;
   }
@@ -101,7 +101,7 @@ function displayPopular(result) {
     <div class="w3-card-4">
         <a class="mylinklist" href="${result.top[i].url}" target="_blank"><img src="${result.top[i].image_url}"></a>
     <div class="w3-container w3-center">
-        <a class="collection-item" style="text-decoration: none;" href="#" onclick='displayAnime("${result.top[i].title}")'><span class="card-title">${result.top[i].title}</span></a>
+        <a class="collection-item" style="text-decoration: none;" href="#" onclick='displayManga("${result.top[i].title}")'><span class="card-title">${result.top[i].title}</span></a>
         </div>
     </div></div>`;
   }
